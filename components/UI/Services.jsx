@@ -6,7 +6,7 @@ import ServicesItem from "./ServicesItem";
 
 const Services = () => {
   return (
-    <section id="skills">
+    <section id="services">
       <Container>
         <Row>
           <Col lg="6" md="6">

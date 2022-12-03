@@ -73,11 +73,11 @@ const portfolio = [
 
   {
     id: "09",
-    title: "Agency Website",
-    img: "/images/portfolio-09.png",
+    title: "React Furniture Shop",
+    img: "/images/shoppingcart.png",
     category: "Web Dev",
     keyword: ["Web", "Web design", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://reactfurnishop.netlify.app/",
   },
 ];
 

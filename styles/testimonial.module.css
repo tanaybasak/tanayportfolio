@@ -15,6 +15,7 @@
 
 .testimonial__img img {
   border-radius: 12rem;
+  cursor: pointer;
 }
 
 

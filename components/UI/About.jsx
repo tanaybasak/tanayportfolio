@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
 import SectionSubtitle from "./SectionSubtitle";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import img01 from "../../public/images/img-01.jpg";
 import img02 from "../../public/images/img-02.jpg";
@@ -78,31 +79,36 @@ const About = () => {
               className={`${classes.about__img__gallery} d-flex gap-4 justify-content-end`}
             >
               <div className=" d-flex flex-column mb-3">
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.2,   transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img01} alt="about-img" />
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.2,   transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img02} alt="about-img" />
-                </div>
+                </motion.div>
               </div>
 
               <div className=" d-flex flex-column mb-3">
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.2,   transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img03} alt="about-img" />
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
+                  whileHover={{ scale: 1.2, transition: { duration: 1 } }}
+                  transition={0.2}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img04} alt="about-img" />
-                </div>
+                </motion.div>
               </div>
             </div>
           </Col>

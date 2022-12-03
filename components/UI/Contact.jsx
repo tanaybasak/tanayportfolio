@@ -12,7 +12,7 @@ const Contact = () => {
         <Row>
           <Col lg="6" md="6">
             <SectionSubtitle subtitle="Contact me" />
-            <h3 className="mt-4 mb-4">Contact with me</h3>
+            <h3 className="mt-4 mb-4">Reach me out</h3>
             <p>
               I&apos;m seeking for opportunities to collaborate with companies / agencies / individuals, not just work for them.
               I want to bring my collective developer experience to the table where we can work together to solve real business-problems

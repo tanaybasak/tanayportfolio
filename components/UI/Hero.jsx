@@ -10,7 +10,7 @@ import classes from "../../styles/hero.module.css";
 const Hero = () => {
 
   const [text, count] = useTypewriter({
-    words: ["Hi I am Tanoy", "GuyWhoTravels.tsx", "<ButLovesToCode />"],
+    words: ["Hi I am Tanoy...", "GuyWhoTravels.tsx", "<ButLovesToCode />"],
     loop: true,
     delaySpeed: 2000,
   });

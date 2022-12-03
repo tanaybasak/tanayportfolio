@@ -9,6 +9,7 @@ import ts from "../../public/images/typescript.svg";
 import servicenow from "../../public/images/servicenow.png";
 import angular from "../../public/images/angular.svg";
 import d3 from "../../public/images/d3.png";
+import redux from "../../public/images/redux.png";
 import npm from "../../public/images/npm.webp";
 import webpack from "../../public/images/webpack.webp";
 import js from '../../public/images/js.png';
@@ -26,7 +27,7 @@ const Testimonial = () => {
           </Col>
 
           <Col lg="6" md="6">
-            <SectionSubtitle subtitle="Testimonials" />
+            <SectionSubtitle subtitle="Skills" />
             <h4 className="mt-4 mb-5">What I do</h4>
 
             {/* <Slider {...settings}>
@@ -107,53 +108,45 @@ const Testimonial = () => {
                 </p>
               </div>
             </Slider> */}
-            <div className="container">
-              <div className="row p-4">
-                <div className="col-sm">
+            <div className={`${classes.grid__container}`}>
+                <div className="grid-item">
                   <Image alt="network-img" src={js} width="80" height="80" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={graphql} width="80" height="80" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={node} width="80" height="80" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={react} width="100" height="80" />
                 </div>
-
-
-              </div>
-              <div className="row p-4">
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={docker} width="100" height="80" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={d3} width="100" height="80" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={ts} width="100" height="80" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={angular} width="100" height="80" />
                 </div>
-              </div>
-              <div className="row p-4">
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={webpack} width="100" height="100" />
                 </div>
              
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={npm} width="100" height="100" />
                 </div>
-                <div className="col-sm">
+                <div className="grid-item">
                   <Image alt="network-img" src={servicenow} width="100" height="100" />
                 </div>
-                <div className="col-sm">
-                  <Image alt="network-img" src={npm} width="100" height="80" />
+                <div className="grid-item">
+                  <Image alt="network-img" src={redux} width="100" height="80" />
                 </div>
                 
-              </div>
             </div>
           </Col>
         </Row>

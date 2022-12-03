@@ -4,25 +4,22 @@ import SectionSubtitle from "./SectionSubtitle";
 import classes from "../../styles/services.module.css";
 import ServicesItem from "./ServicesItem";
 
-const defaultContent =  `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non amet culpa nobis corporis officiis, numquam cupiditate, enim expedita
-eveniet dolorum, aliquid nesciunt sapiente illo voluptatum!
-Dolores fuga mollitia atque, placeat minima quibusdam accusantium!
-Veniam, non distinctio dolorem rerum laboriosam deleniti.`
+const defaultContent = `A Frontend engineer with 5+ years of experience specializing in <span style="color: yellow"> wireframing, prototyping and web development</span>. Adept at building high-quality code and developing innovative web applications to make things look cool over web`
 
-const web = `web`;
+const web = `I specialize in <span style="color: yellow"> REACT-REDUX </span> framework to develop responsive applications along with optimized web performance`;
 const app = `Deployment`;
-const fullStack = `Full Stack`;
+const fullStack = `I specialize in <span style="color: yellow"> NODEJS </span> framework along with <span style="color: yellow"> GRAPHQL </span> to develop <span style="color: yellow"> MEAN </span> stack applications which cut latency by 40% and increased effectiveness of database administrators by 20%`;
 
 
 const Services = () => {
- const wrapperRef = useRef(null);
- const [content, setContent] = useState(defaultContent);
- const  onHandleServices = (dev) => {
-    if(dev == 'App Deployment') {
-      setContent(web)
+  const wrapperRef = useRef(null);
+  const [content, setContent] = useState(defaultContent);
+  const onHandleServices = (dev) => {
+    if (dev == 'App Deployment') {
+      setContent(app)
     }
-    else if(dev == 'Web Development') {
-      setContent(app);
+    else if (dev == 'Web Development') {
+      setContent(web);
     }
     else {
       setContent(fullStack)
@@ -68,9 +65,7 @@ const Services = () => {
             <SectionSubtitle subtitle="What I do" />
             <h3 className="mb-0 mt-4">Better Development,</h3>
             <h3 className="mb-4">Better Experience</h3>
-            <p>
-              {content}
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: content }} />
           </Col>
         </Row>
       </Container>

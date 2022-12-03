@@ -2,20 +2,16 @@
   padding: 0px 20px;
 }
 
-.testimonial__client {
-  display: flex;
-  column-gap: 1rem;
-  margin-bottom: 30px;
+.grid__container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 50px;
+
 }
 
-.testimonial__client h6 {
-  font-weight: 400;
+.grid__container div {
+  text-align: center;
 }
-
-.testimonial__client h6:last-child {
-  color: #01d293;
-}
-
 
 .testimonial__img img {
   border-radius: 12rem;
@@ -26,6 +22,10 @@
   .testimonial__img img {
     width: 300px !important;
     height: 300px !important;
+  }
+
+  .grid__container {
+    grid-template-columns: auto auto;
   }
 
   .testimonial__img {

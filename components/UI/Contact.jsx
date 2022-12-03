@@ -14,9 +14,12 @@ const Contact = () => {
             <SectionSubtitle subtitle="Contact me" />
             <h3 className="mt-4 mb-4">Contact with me</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              beatae ratione iusto cum. Doloremque suscipit eius provident error
-              labore est reprehenderit, exercitationem corrupti earum deleniti!
+              I&apos;m seeking for opportunities to collaborate with companies / agencies / individuals, not just work for them.
+              I want to bring my collective developer experience to the table where we can work together to solve real business-problems
+              in a way that optimizes all of your respective experience and knowledge.
+              <br />
+              Let&apos;s for sure talk about how we can work together.
+              <br/>
             </p>
 
             <ul className={`${classes.contact__info__list}`}>

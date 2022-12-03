@@ -7,6 +7,20 @@ import heroImg from "../../public/images/hero.jpg";
 import classes from "../../styles/hero.module.css";
 
 const Hero = () => {
+  const onDownloadClick = () => {
+    // using Java Script method to get PDF file
+    fetch('/TanoyBasakResume.pdf').then(response => {
+      response.blob().then(blob => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'TanoyBasakResume.pdf';
+        alink.click();
+      })
+    })
+  }
   return (
     <section className={`${classes.hero}`}>
       <Container>
@@ -15,20 +29,18 @@ const Hero = () => {
           <Col lg="6" md="6">
             <div className={`${classes.hero__content}`}>
               <SectionSubtitle subtitle="Hello" />
-              <h2 className="mt-3 mb-3">I&apos;m Tanoy Basak</h2>
+              <h2 className="mt-3 mb-3">I&apos;m Tanoy</h2>
               <h5 className="mb-4">Javascript Engineer</h5>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Impedit rem sint ipsa cumque. Atque rem vel iusto impedit omnis
-                quos!
+                A frontend engineer passionate <br />  for developing engaging UI & bringing products to life.
               </p>
               <div className="mt-5">
                 <button className="primary__btn">
-                  <Link href="#">Hire me</Link>
+                  <Link href="#contact">Hire me</Link>
                 </button>
 
                 <button className="secondary__btn">
-                  <Link href="#">Download CV</Link>
+                <Link href={'#'} legacyBehavior><span onClick={onDownloadClick} style={{color: '#01d293'}}> Download Resume </span></Link>
                 </button>
               </div>
             </div>
@@ -37,7 +49,7 @@ const Hero = () => {
           {/* ========== hero img ============= */}
           <Col lg="6" md="6">
             <div className={`${classes.hero__img} text-end`}>
-              <Image alt="hero-image" src={heroImg} width="400" height="400" />
+              <Image alt="hero-image" src={heroImg} width="300" height="450" />
 
               <div className={`${classes.hero__skills}`}>
                 <h6>Skills</h6>

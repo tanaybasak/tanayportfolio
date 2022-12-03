@@ -12,7 +12,7 @@ const Services = () => {
           <Col lg="6" md="6">
             <div className={`${classes.services__container}`}>
               <div>
-                <ServicesItem title="App Development" icon="ri-apps-line" />
+                <ServicesItem title="App Deployment" icon="ri-apps-line" />
 
                 <ServicesItem title="Web Development" icon="ri-computer-line" />
               </div>
@@ -26,7 +26,7 @@ const Services = () => {
 
           <Col lg="6" md="6" className={`${classes.service__title}`}>
             <SectionSubtitle subtitle="What I do" />
-            <h3 className="mb-0 mt-4">Better Design,</h3>
+            <h3 className="mb-0 mt-4">Better Development,</h3>
             <h3 className="mb-4">Better Experience</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non amet

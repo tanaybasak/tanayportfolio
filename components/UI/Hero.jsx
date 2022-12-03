@@ -1,5 +1,6 @@
 import React from "react";
 import SectionSubtitle from "./SectionSubtitle";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Container, Row, Col } from "reactstrap";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,13 @@ import heroImg from "../../public/images/hero.jpg";
 import classes from "../../styles/hero.module.css";
 
 const Hero = () => {
+
+  const [text, count] = useTypewriter({
+    words: ["Hi I am Tanoy", "GuyWhoTravels.tsx", "<ButLovesToCode />"],
+    loop: true,
+    delaySpeed: 2000,
+  });
+
   const onDownloadClick = () => {
     // using Java Script method to get PDF file
     fetch('/TanoyBasakResume.pdf').then(response => {
@@ -29,7 +37,10 @@ const Hero = () => {
           <Col lg="6" md="6">
             <div className={`${classes.hero__content}`}>
               <SectionSubtitle subtitle="Hello" />
-              <h2 className="mt-3 mb-3">I&apos;m Tanoy</h2>
+              <h2 className="mt-3 mb-3">
+                <span className="mr-3">{text}</span>
+                <Cursor cursorColor="#f7abba"></Cursor>
+              </h2>
               <h5 className="mb-4">Javascript Engineer</h5>
               <p>
                 A frontend engineer passionate <br />  for developing engaging UI & bringing products to life.
@@ -40,7 +51,7 @@ const Hero = () => {
                 </button>
 
                 <button className="secondary__btn">
-                <Link href={'#'} legacyBehavior><span onClick={onDownloadClick} style={{color: '#01d293'}}> Download Resume </span></Link>
+                  <Link href={'#'} legacyBehavior><span onClick={onDownloadClick} style={{ color: '#01d293' }}> Download Resume </span></Link>
                 </button>
               </div>
             </div>

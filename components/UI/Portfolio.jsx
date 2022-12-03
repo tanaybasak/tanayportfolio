@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import SectionSubtitle from "./SectionSubtitle";
 import classes from "../../styles/portfolio.module.css";
 import PortfolioItem from "./PortfolioItem";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import portfolioData from "../data/portfolio";
 

@@ -16,6 +16,12 @@
   color: #01d293;
 }
 
+
+.testimonial__img img {
+  border-radius: 12rem;
+}
+
+
 @media only screen and (max-width: 768px) {
   .testimonial__img img {
     width: 300px !important;

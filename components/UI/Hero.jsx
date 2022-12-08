@@ -4,7 +4,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { Container, Row, Col } from "reactstrap";
 import Image from "next/image";
 import Link from "next/link";
-import heroImg from "../../public/images/hero.jpg";
+import heroImg from "../../public/images/hero.webp";
 import classes from "../../styles/hero.module.css";
 
 const Hero = () => {

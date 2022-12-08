@@ -6,6 +6,7 @@ import network from "../../public/images/Connected world.png";
 import graphql from "../../public/images/graphql.png";
 import docker from "../../public/images/docker.png";
 import ts from "../../public/images/typescript.svg";
+import rabbitMQ from "../../public/images/rabbitMQ.png";
 import servicenow from "../../public/images/servicenow.png";
 import angular from "../../public/images/angular.svg";
 import d3 from "../../public/images/d3.png";
@@ -131,7 +132,7 @@ const Testimonial = () => {
                   <Image alt="network-img" src={ts} width="100" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={angular} width="100" height="80" />
+                  <Image alt="network-img" src={rabbitMQ} width="120" height="80" />
                 </div>
                 <div className="grid-item">
                   <Image alt="network-img" src={webpack} width="100" height="100" />
@@ -146,7 +147,6 @@ const Testimonial = () => {
                 <div className="grid-item">
                   <Image alt="network-img" src={redux} width="100" height="80" />
                 </div>
-                
             </div>
           </Col>
         </Row>

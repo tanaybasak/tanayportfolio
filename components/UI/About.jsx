@@ -5,10 +5,10 @@ import SectionSubtitle from "./SectionSubtitle";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import img01 from "../../public/images/img-01.jpg";
-import img02 from "../../public/images/img-02.jpg";
-import img03 from "../../public/images/img-03.jpg";
-import img04 from "../../public/images/hero.jpg";
+import img01 from "../../public/images/img-01.webp";
+import img02 from "../../public/images/img-02.webp";
+import img03 from "../../public/images/img-03.webp";
+import img04 from "../../public/images/hero.webp";
 
 import classes from "../../styles/about.module.css";
 
@@ -22,11 +22,19 @@ const About = () => {
             <h3 className="mt-4">I&apos;m here</h3>
             <h3 className="mb-4">to help your next project</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              neque asperiores temporibus quo saepe odio, esse labore libero
-              obcaecati quidem explicabo blanditiis deleniti ex vitae ratione
-              ullam fugiat dicta eum sint officiis porro illum quia. Error quam
-              cum excepturi beatae.
+              Domains I have worked on : <br />
+              - &nbsp;eCommerce <br />
+              - &nbsp;Business websites <br />
+              - &nbsp;Catalog websites <br />
+              - &nbsp;Service Now - Portal <br />
+              - &nbsp;Salesforce Lightning <br />
+              - &nbsp;Custom and Dynamic website <br />
+              - &nbsp;Sharepoint <br />
+              - &nbsp;SaaS product <br />
+
+              I will work with you to discover what you need and create the best solution. <br />
+              My priorities are delivering quality work and respect for deadlines.<br />
+              I love to share my enthusiasm and passion for development, so feel free to contact me,
             </p>
 
             <div className=" d-flex align-items-center gap-5">
@@ -58,7 +66,7 @@ const About = () => {
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  High Quality
+                  High Quality Code
                 </h6>
               </div>
             </div>
@@ -80,14 +88,14 @@ const About = () => {
             >
               <div className=" d-flex flex-column mb-3">
                 <motion.div
-                  whileHover={{ scale: 1.2,   transition: { duration: 1 }, }}
+                  whileHover={{ scale: 1.2, transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img01} alt="about-img" />
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.2,   transition: { duration: 1 }, }}
+                  whileHover={{ scale: 1.2, transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img02} alt="about-img" />
@@ -96,7 +104,7 @@ const About = () => {
 
               <div className=" d-flex flex-column mb-3">
                 <motion.div
-                  whileHover={{ scale: 1.2,   transition: { duration: 1 }, }}
+                  whileHover={{ scale: 1.2, transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
                   <Image src={img03} alt="about-img" />

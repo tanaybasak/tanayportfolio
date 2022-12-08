@@ -6,8 +6,8 @@ import ServicesItem from "./ServicesItem";
 
 const defaultContent = `A Frontend engineer with 5+ years of experience specializing in <span style="color: yellow"> wireframing, prototyping and web development</span>. Adept at building high-quality code and developing innovative web applications to make things look cool over web`
 
-const web = `I specialize in <span style="color: yellow"> REACT-REDUX </span> framework to develop responsive applications along with optimized web performance`;
-const app = `Deployment`;
+const web = `I specialize in <span style="color: yellow"> REACT-REDUX </span> framework to develop responsive applications along with optimized web performance. I have developed applications for multiple MNC's and provided end-to-end solutions to cater requirements within short frame of time`;
+const app = `Contributed in containerization of applications using  <span style="color: yellow">Docker </span> and  <span style="color: yellow">k8s </span> on cloud`;
 const fullStack = `I specialize in <span style="color: yellow"> NODEJS </span> framework along with <span style="color: yellow"> GRAPHQL </span> to develop <span style="color: yellow"> MEAN </span> stack applications which cut latency by 40% and increased effectiveness of database administrators by 20%`;
 
 

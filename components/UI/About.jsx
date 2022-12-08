@@ -91,14 +91,14 @@ const About = () => {
                   whileHover={{ scale: 1.2, transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
-                  <Image src={img01} alt="about-img" />
+                  <Image loading="lazy" src={img01} alt="about-img" />
                 </motion.div>
 
                 <motion.div
                   whileHover={{ scale: 1.2, transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
-                  <Image src={img02} alt="about-img" />
+                  <Image loading="lazy" src={img02} alt="about-img" />
                 </motion.div>
               </div>
 
@@ -107,7 +107,7 @@ const About = () => {
                   whileHover={{ scale: 1.2, transition: { duration: 1 }, }}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
-                  <Image src={img03} alt="about-img" />
+                  <Image loading="lazy" src={img03} alt="about-img" />
                 </motion.div>
 
                 <motion.div
@@ -115,7 +115,7 @@ const About = () => {
                   transition={0.2}
                   className={`${classes.about__img} ${classes.about__img__box}`}
                 >
-                  <Image src={img04} alt="about-img" />
+                  <Image loading="lazy" src={img04} alt="about-img" />
                 </motion.div>
               </div>
             </div>

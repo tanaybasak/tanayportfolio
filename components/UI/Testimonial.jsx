@@ -24,7 +24,7 @@ const Testimonial = () => {
       <Container>
         <Row>
           <Col lg="6" md="6" className={`${classes.testimonial__img}`}>
-            <Image alt="network-img" src={network} width="400" height="400"  />
+            <Image loading="lazy" alt="network-img" src={network} width="400" height="400"  />
           </Col>
 
           <Col lg="6" md="6">
@@ -111,41 +111,41 @@ const Testimonial = () => {
             </Slider> */}
             <div className={`${classes.grid__container}`}>
                 <div className="grid-item">
-                  <Image alt="network-img" src={js} width="80" height="80" />
+                  <Image alt="network-img" loading="lazy" src={js} width="80" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={graphql} width="80" height="80" />
+                  <Image alt="network-img" loading="lazy" src={graphql} width="80" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={node} width="80" height="80" />
+                  <Image alt="network-img" loading="lazy" src={node} width="80" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={react} width="100" height="80" />
+                  <Image alt="network-img" loading="lazy" src={react} width="100" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={docker} width="100" height="80" />
+                  <Image alt="network-img" loading="lazy" src={docker} width="100" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={d3} width="100" height="80" />
+                  <Image alt="network-img" loading="lazy" src={d3} width="100" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={ts} width="100" height="80" />
+                  <Image alt="network-img" loading="lazy" src={ts} width="100" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={rabbitMQ} width="120" height="80" />
+                  <Image alt="network-img" loading="lazy" src={rabbitMQ} width="120" height="80" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={webpack} width="100" height="100" />
+                  <Image alt="network-img" loading="lazy" src={webpack} width="100" height="100" />
                 </div>
              
                 <div className="grid-item">
-                  <Image alt="network-img" src={npm} width="100" height="100" />
+                  <Image alt="network-img" loading="lazy" src={npm} width="100" height="100" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={servicenow} width="100" height="100" />
+                  <Image alt="network-img" loading="lazy" src={servicenow} width="100" height="100" />
                 </div>
                 <div className="grid-item">
-                  <Image alt="network-img" src={redux} width="100" height="80" />
+                  <Image alt="network-img" loading="lazy" src={redux} width="100" height="80" />
                 </div>
             </div>
           </Col>

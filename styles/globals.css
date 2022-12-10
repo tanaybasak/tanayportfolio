@@ -3,14 +3,16 @@
 :root {
   --background: #0e1630;
   --text-primary: #fff;
-  --text-secondary: #01d293;;
+  --text-secondary: #808dad;
+  --textarea-background: #0e1630;
   --accent: purple;
 }
 
 [data-theme='Light'] {
-  --background: #F7EDDB;
-  --text-primary: #000;
-  --text-secondary: #464033;
+  --background: #FEFEFF;
+  --text-primary: #FE654F;
+  --text-secondary: #000;
+  --textarea-background: #D6EFFF;
   --accent: darkred;
 }
 
@@ -33,7 +35,7 @@ a {
 }
 
 p {
-  color: #808dad;
+  color: var(--text-secondary);
   line-height: 30px;
 }
 
@@ -120,6 +122,3 @@ footer {
     border: none;
   }
 }
-
-
-

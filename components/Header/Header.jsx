@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
-import { Container } from "reactstrap";
+import { Container, Input, Form, FormGroup, Label } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
 
@@ -28,10 +28,15 @@ const NAV__LINK = [
   },
 ];
 
-const Header = () => {
+const Header = ({ setAppTheme }) => {
   const headerRef = useRef(null);
-
   const menuRef = useRef(null);
+  const [theme, themeSet] = useState('Dark');
+  const handleTheme = (value) => {
+    const themevalue = value == 'on' ? 'Light' : 'Dark';
+    themeSet(themevalue);
+    setAppTheme(themevalue);
+  }
 
   const headerFunc = () => {
     if (
@@ -79,9 +84,18 @@ const Header = () => {
 
               <div className={`${classes.nav__right}`}>
                 <p className=" d-flex align-items-center gap-2 mb-0">
-                  {" "}
                   <i className="ri-phone-line"></i> +91-863-897-4203{" "}
                 </p>
+              </div>
+              <div>
+                <Form>
+                  <FormGroup switch>
+                    <p className=" d-flex align-items-center gap-2 mb-0">
+                      <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.value)} />
+                      <Label check>{theme}</Label>
+                    </p>
+                  </FormGroup>
+                </Form>
               </div>
             </div>
           </div>
@@ -91,7 +105,7 @@ const Header = () => {
           </span>
         </div>
       </Container>
-    </header>
+    </header >
   );
 };
 

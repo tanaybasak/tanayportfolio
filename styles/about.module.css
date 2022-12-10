@@ -1,5 +1,5 @@
 .about__icon i {
-  color: #01d293;
+  color: var(--text-secondary);
 }
 
 .about__img {

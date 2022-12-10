@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
+:root {
+  --background: #0e1630;
+  --text-primary: #fff;
+  --text-secondary: #01d293;;
+  --accent: purple;
+}
+
+[data-theme='Light'] {
+  --background: #F7EDDB;
+  --text-primary: #000;
+  --text-secondary: #464033;
+  --accent: darkred;
+}
+
 html,
 body {
   padding: 0;
@@ -15,20 +29,21 @@ a {
 
 * {
   box-sizing: border-box;
-  background: #0e1630;
+  background-color: var(--background);
 }
 
 p {
   color: #808dad;
   line-height: 30px;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 h2 {
@@ -54,7 +69,7 @@ footer {
 
 .primary__btn a {
   text-decoration: none;
-  color: #01d293;
+  color: var(--text-secondary);
   background: transparent !important;
 }
 
@@ -68,9 +83,10 @@ footer {
 .secondary__btn a {
   color: #01d293 !important;
 }
+
 .primary__btn a:hover,
 .secondary__btn a:hover {
-  color: #01d293;
+  color: var(--text-secondary);
 }
 
 ::-webkit-scrollbar {
@@ -104,3 +120,6 @@ footer {
     border: none;
   }
 }
+
+
+

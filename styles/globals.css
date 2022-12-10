@@ -4,7 +4,7 @@
   --background: #0e1630;
   --text-primary: #fff;
   --text-secondary: #808dad;
-  --textarea-background: #0e1630;
+  --textarea-background: #171f38;
   --accent: purple;
 }
 
@@ -63,7 +63,7 @@ footer {
 }
 
 .primary__btn {
-  background: #171f38 !important;
+  background: var(--textarea-background) !important;
   padding: 7px 25px !important;
   border: 1px solid #01d293 !important;
   border-radius: 5px;

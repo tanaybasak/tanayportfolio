@@ -6,7 +6,7 @@ const portfolio = [
     category: "Mobile App",
     keyword: ["Mobile", "App", "UI-UX"],
     liveUrl: "#",
-  }
+  },
 
   // {
   //   id: "02",
@@ -71,14 +71,14 @@ const portfolio = [
   //   liveUrl: "#",
   // },
 
-  // {
-  //   id: "09",
-  //   title: "React Furniture Shop",
-  //   img: "/images/shoppingcart.png",
-  //   category: "Web Dev",
-  //   keyword: ["Web", "Web design", "UI-UX"],
-  //   liveUrl: "https://reactfurnishop.netlify.app/",
-  // },
+  {
+    id: "09",
+    title: "React Furniture Shop",
+    img: "/images/shoppingcart.png",
+    category: "Web Dev",
+    keyword: ["Web", "Web design", "UI-UX"],
+    liveUrl: "https://reactfurnishop.netlify.app/",
+  }
 ];
 
 export default portfolio;

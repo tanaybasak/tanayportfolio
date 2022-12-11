@@ -33,7 +33,8 @@ const Header = ({ setAppTheme }) => {
   const menuRef = useRef(null);
   const [theme, themeSet] = useState('Dark');
   const handleTheme = (value) => {
-    const themevalue = value == 'on' ? 'Light' : 'Dark';
+    const themevalue = value ? 'Light' : 'Dark';
+    console.log(value);
     themeSet(themevalue);
     setAppTheme(themevalue);
   }
@@ -91,7 +92,7 @@ const Header = ({ setAppTheme }) => {
                 <Form>
                   <FormGroup switch>
                     <p className=" d-flex align-items-center gap-2 mb-0">
-                      <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.value)} />
+                      <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.checked)} />
                       <Label check>{theme}</Label>
                     </p>
                   </FormGroup>

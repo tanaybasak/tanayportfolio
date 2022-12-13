@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Container, Input, Form, FormGroup, Label } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
+import localStorageUtil from "./util";
 
 const NAV__LINK = [
   {
@@ -31,13 +32,21 @@ const NAV__LINK = [
 const Header = ({ setAppTheme }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
-  const [theme, themeSet] = useState('Dark');
+  const [theme, themeSet] = useState('');
+
+
+  useEffect(() => {
+    themeSet(localStorageUtil());
+
+  }, [])
+
   const handleTheme = (value) => {
     const themevalue = value ? 'Light' : 'Dark';
-    console.log(value);
     themeSet(themevalue);
     setAppTheme(themevalue);
   }
+
+
 
   const headerFunc = () => {
     if (

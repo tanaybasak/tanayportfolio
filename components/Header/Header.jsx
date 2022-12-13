@@ -36,6 +36,7 @@ const Header = ({ setAppTheme }) => {
 
 
   useEffect(() => {
+    
     themeSet(localStorageUtil());
 
   }, [])

@@ -8,7 +8,6 @@ import docker from "../../public/images/docker.png";
 import ts from "../../public/images/typescript.svg";
 import rabbitMQ from "../../public/images/rabbitMQ.png";
 import servicenow from "../../public/images/servicenow.png";
-import angular from "../../public/images/angular.svg";
 import d3 from "../../public/images/d3.png";
 import redux from "../../public/images/redux.png";
 import npm from "../../public/images/npm.webp";

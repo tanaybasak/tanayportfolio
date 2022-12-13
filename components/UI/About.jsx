@@ -5,10 +5,10 @@ import SectionSubtitle from "./SectionSubtitle";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import img01 from "/public/images/img-01.webp";
-import img02 from "/public/images/img-02.webp";
-import img03 from "/public/images/img-03.webp";
-import img04 from "/public/images/hero.webp";
+import img01 from "../../public/images/img-01.webp";
+import img02 from "../../public/images/img-02.webp";
+import img03 from "../../public/images/img-03.webp";
+import img04 from "../../public/images/hero.webp";
 
 import classes from "../../styles/about.module.css";
 

@@ -23,13 +23,11 @@ const About = () => {
             <h3 className="mb-4">to help your next project</h3>
             <p>
               Domains I have worked on : <br />
-              - &nbsp;eCommerce <br />
-              - &nbsp;Business websites <br />
-              - &nbsp;Catalog websites <br />
+              - &nbsp;Design Systems <br />
+              - &nbsp;Business webapps <br />
               - &nbsp;Service Now - Portal <br />
               - &nbsp;Salesforce Lightning <br />
               - &nbsp;Custom and Dynamic website <br />
-              - &nbsp;Sharepoint <br />
               - &nbsp;SaaS product <br />
 
               I will work with you to discover what you need and create the best solution. <br />

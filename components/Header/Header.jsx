@@ -1,31 +1,40 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, cloneElement } from "react";
 
 import { Container, Input, Form, FormGroup, Label } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
 import localStorageUtil from "./util";
+import { useRouter } from "next/router";
 
 const NAV__LINK = [
   {
     path: "/",
+    id: 1,
     display: "Home",
+    active: true
   },
 
   {
-    path: "#services",
-    display: "Services",
+    path: "/#services",
+    id: 2,
+    display: "Services"
+
   },
   {
-    path: "#portfolio",
-    display: "Projects",
+    path: "/#portfolio",
+    id: 3,
+    display: "Projects"
   },
   {
-    path: "#about",
-    display: "About",
+    path: "/#about",
+    id: 4,
+    display: "About"
   },
   {
-    path: "#contact",
-    display: "Contact",
+    path: "/#contact",
+    id: 5,
+    display: "Contact"
+
   },
 ];
 
@@ -33,10 +42,11 @@ const Header = ({ setAppTheme }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const [theme, themeSet] = useState('');
-
-
+  const router = useRouter();
+  console.log(router.asPath)
+  console.log(classes);
   useEffect(() => {
-    
+
     themeSet(localStorageUtil());
 
   }, [])
@@ -87,35 +97,37 @@ const Header = ({ setAppTheme }) => {
             onClick={toggleMenu}
           >
             <div className={`${classes.nav__menu}`}>
-              {NAV__LINK.map((item, index) => (
-                <Link href={item.path} key={index}>
+              {NAV__LINK.map((item) => (
+                <Link href={item.path} key={item.id} >
+\                  <a style={{color : router.asPath == item.path ? '#01d293' : ''}}>
                   {item.display}
+                </a>
                 </Link>
               ))}
 
-              <div className={`${classes.nav__right}`}>
-                <p className=" d-flex align-items-center gap-2 mb-0">
-                  <i className="ri-phone-line"></i> +91-863-897-4203{" "}
-                </p>
-              </div>
-              <div>
-                <Form>
-                  <FormGroup switch>
-                    <p className=" d-flex align-items-center gap-2 mb-0">
-                      <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.checked)} />
-                      <Label check>{theme}</Label>
-                    </p>
-                  </FormGroup>
-                </Form>
-              </div>
+            <div className={`${classes.nav__right}`}>
+              <p className=" d-flex align-items-center gap-2 mb-0">
+                <i className="ri-phone-line"></i> +91-863-897-4203{" "}
+              </p>
+            </div>
+            <div>
+              <Form>
+                <FormGroup switch>
+                  <p className=" d-flex align-items-center gap-2 mb-0">
+                    <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.checked)} />
+                    <Label check>{theme}</Label>
+                  </p>
+                </FormGroup>
+              </Form>
             </div>
           </div>
-
-          <span className={`${classes.mobile__menu}`}>
-            <i className="ri-menu-line" onClick={toggleMenu}></i>
-          </span>
         </div>
-      </Container>
+
+        <span className={`${classes.mobile__menu}`}>
+          <i className="ri-menu-line" onClick={toggleMenu}></i>
+        </span>
+      </div>
+    </Container>
     </header >
   );
 };

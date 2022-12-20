@@ -43,8 +43,7 @@ const Header = ({ setAppTheme }) => {
   const menuRef = useRef(null);
   const [theme, themeSet] = useState('');
   const router = useRouter();
-  console.log(router.asPath)
-  console.log(classes);
+
   useEffect(() => {
 
     themeSet(localStorageUtil());
@@ -99,7 +98,7 @@ const Header = ({ setAppTheme }) => {
             <div className={`${classes.nav__menu}`}>
               {NAV__LINK.map((item) => (
                 <Link href={item.path} key={item.id} >
-\                  <a style={{color : router.asPath == item.path ? '#01d293' : ''}}>
+                  <a style={{color : router.asPath == item.path ? '#01d293' : ''}}>
                   {item.display}
                 </a>
                 </Link>

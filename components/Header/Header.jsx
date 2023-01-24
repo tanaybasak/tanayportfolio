@@ -1,10 +1,12 @@
 import React, { useRef, useEffect, useState, cloneElement } from "react";
 
-import { Container, Input, Form, FormGroup, Label } from "reactstrap";
+import { Container, Input, Form, FormGroup, Label, NavLink } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
 import localStorageUtil from "./util";
 import { useRouter } from "next/router";
+
+console.log(classes.nav__menu);
 
 const NAV__LINK = [
   {
@@ -42,8 +44,7 @@ const Header = ({ setAppTheme }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const [theme, themeSet] = useState('');
-  const router = useRouter();
-
+  const [currentPath, setCurrentPath] = useState('/');
   useEffect(() => {
 
     themeSet(localStorageUtil());
@@ -56,7 +57,9 @@ const Header = ({ setAppTheme }) => {
     setAppTheme(themevalue);
   }
 
-
+const selectedPath = (item) => {
+  setCurrentPath(item.path);
+}
 
   const headerFunc = () => {
     if (
@@ -97,36 +100,34 @@ const Header = ({ setAppTheme }) => {
           >
             <div className={`${classes.nav__menu}`}>
               {NAV__LINK.map((item) => (
-                <Link href={item.path} key={item.id} >
-                  <a style={{color : router.asPath == item.path ? '#01d293' : ''}}>
+                <NavLink href={item.path} key={item.id} onClick={() => selectedPath(item)} active={currentPath == item.path ? true : false}>
                   {item.display}
-                </a>
-                </Link>
+                </NavLink>
               ))}
 
-            <div className={`${classes.nav__right}`}>
-              <p className=" d-flex align-items-center gap-2 mb-0">
-                <i className="ri-phone-line"></i> +91-863-897-4203{" "}
-              </p>
-            </div>
-            <div>
-              <Form>
-                <FormGroup switch>
-                  <p className=" d-flex align-items-center gap-2 mb-0">
-                    <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.checked)} />
-                    <Label check>{theme}</Label>
-                  </p>
-                </FormGroup>
-              </Form>
+              <div className={`${classes.nav__right}`}>
+                <p className=" d-flex align-items-center gap-2 mb-0">
+                  <i className="ri-phone-line"></i> +91-863-897-4203{" "}
+                </p>
+              </div>
+              <div>
+                <Form>
+                  <FormGroup switch>
+                    <p className=" d-flex align-items-center gap-2 mb-0">
+                      <Input type="switch" role="switch" onChange={(e) => handleTheme(e.target.checked)} />
+                      <Label check>{theme}</Label>
+                    </p>
+                  </FormGroup>
+                </Form>
+              </div>
             </div>
           </div>
-        </div>
 
-        <span className={`${classes.mobile__menu}`}>
-          <i className="ri-menu-line" onClick={toggleMenu}></i>
-        </span>
-      </div>
-    </Container>
+          <span className={`${classes.mobile__menu}`}>
+            <i className="ri-menu-line" onClick={toggleMenu}></i>
+          </span>
+        </div>
+      </Container>
     </header >
   );
 };

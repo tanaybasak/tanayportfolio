@@ -8,14 +8,14 @@ const portfolio = [
     liveUrl: "#",
   },
 
-  // {
-  //   id: "02",
-  //   title: "Workout Tracker App",
-  //   img: "/images/portfolio-02.jpg",
-  //   category: "Mobile App",
-  //   keyword: ["Mobile", "App", "UI-UX"],
-  //   liveUrl: "#",
-  // },
+  {
+    id: "02",
+    title: "Ecommerce App",
+    img: "/images/ecomm_shop.png",
+    category: "Web Dev",
+    keyword: ["Mobile", "App", "UI-UX"],
+    liveUrl: "https://ecommshopboat.netlify.app/",
+  },
 
   // {
   //   id: "03",

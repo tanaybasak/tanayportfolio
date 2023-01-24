@@ -1,31 +1,42 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, cloneElement } from "react";
 
-import { Container, Input, Form, FormGroup, Label } from "reactstrap";
+import { Container, Input, Form, FormGroup, Label, NavLink } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
 import localStorageUtil from "./util";
+import { useRouter } from "next/router";
+
+console.log(classes.nav__menu);
 
 const NAV__LINK = [
   {
     path: "/",
+    id: 1,
     display: "Home",
+    active: true
   },
 
   {
-    path: "#services",
-    display: "Services",
+    path: "/#services",
+    id: 2,
+    display: "Services"
+
   },
   {
-    path: "#portfolio",
-    display: "Projects",
+    path: "/#portfolio",
+    id: 3,
+    display: "Projects"
   },
   {
-    path: "#about",
-    display: "About",
+    path: "/#about",
+    id: 4,
+    display: "About"
   },
   {
-    path: "#contact",
-    display: "Contact",
+    path: "/#contact",
+    id: 5,
+    display: "Contact"
+
   },
 ];
 
@@ -33,10 +44,9 @@ const Header = ({ setAppTheme }) => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const [theme, themeSet] = useState('');
-
-
+  const [currentPath, setCurrentPath] = useState('/');
   useEffect(() => {
-    
+
     themeSet(localStorageUtil());
 
   }, [])
@@ -47,7 +57,9 @@ const Header = ({ setAppTheme }) => {
     setAppTheme(themevalue);
   }
 
-
+const selectedPath = (item) => {
+  setCurrentPath(item.path);
+}
 
   const headerFunc = () => {
     if (
@@ -87,10 +99,10 @@ const Header = ({ setAppTheme }) => {
             onClick={toggleMenu}
           >
             <div className={`${classes.nav__menu}`}>
-              {NAV__LINK.map((item, index) => (
-                <Link href={item.path} key={index}>
+              {NAV__LINK.map((item) => (
+                <NavLink href={item.path} key={item.id} onClick={() => selectedPath(item)} active={currentPath == item.path ? true : false}>
                   {item.display}
-                </Link>
+                </NavLink>
               ))}
 
               <div className={`${classes.nav__right}`}>

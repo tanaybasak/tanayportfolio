@@ -16,6 +16,14 @@ const portfolio = [
     keyword: ["Mobile", "App", "UI-UX"],
     liveUrl: "https://ecommshopboat.netlify.app/",
   },
+  {
+    id: "03",
+    title: "Financial Dashboard",
+    img: "/images/dashboard.png",
+    category: "Web Dev",
+    keyword: ["Mobile", "App", "UI-UX"],
+    liveUrl: "https://reactfinancials.netlify.app",
+  },
 
   // {
   //   id: "03",

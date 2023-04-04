@@ -1,6 +1,6 @@
 const portfolio = [
   {
-    id: "01",
+    id: "1",
     title: "Transportation Mobile App",
     img: "/images/portfolio-01.jpg",
     category: "Mobile App",
@@ -9,7 +9,7 @@ const portfolio = [
   },
 
   {
-    id: "02",
+    id: "2",
     title: "Ecommerce App",
     img: "/images/ecomm_shop.png",
     category: "Web Dev",
@@ -17,7 +17,7 @@ const portfolio = [
     liveUrl: "https://ecommshopboat.netlify.app/",
   },
   {
-    id: "03",
+    id: "3",
     title: "Financial Dashboard",
     img: "/images/dashboard.png",
     category: "Web Dev",

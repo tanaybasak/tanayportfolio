@@ -23,7 +23,7 @@ const portfolio = [
     category: "Web Dev",
     keyword: ["Mobile", "App", "UI-UX"],
     liveUrl: "https://reactfinancials.netlify.app",
-  },
+  }
 
   // {
   //   id: "03",

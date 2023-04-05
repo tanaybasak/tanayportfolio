@@ -1,13 +1,12 @@
 const portfolio = [
   {
     id: "1",
-    title: "Transportation Mobile App",
-    img: "/images/portfolio-01.jpg",
-    category: "Mobile App",
+    title: "Financial Dashboard",
+    img: "/images/dashboard.png",
+    category: "Web Dev",
     keyword: ["Mobile", "App", "UI-UX"],
-    liveUrl: "#",
+    liveUrl: "https://reactfinancials.netlify.app",
   },
-
   {
     id: "2",
     title: "Ecommerce App",
@@ -16,14 +15,7 @@ const portfolio = [
     keyword: ["Mobile", "App", "UI-UX"],
     liveUrl: "https://ecommshopboat.netlify.app/",
   },
-  {
-    id: "3",
-    title: "Financial Dashboard",
-    img: "/images/dashboard.png",
-    category: "Web Dev",
-    keyword: ["Mobile", "App", "UI-UX"],
-    liveUrl: "https://reactfinancials.netlify.app",
-  }
+
 
   // {
   //   id: "03",
@@ -80,7 +72,7 @@ const portfolio = [
   // },
 
   {
-    id: "09",
+    id: "3",
     title: "React Furniture Shop",
     img: "/images/shoppingcart.png",
     category: "Web Dev",

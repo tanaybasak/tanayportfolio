@@ -23,6 +23,7 @@ const About = () => {
             <h3 className="mb-4">to help your next project</h3>
             <p>
               Domains I have worked on : <br />
+              - &nbsp;EHR Health Record <br />
               - &nbsp;Design Systems <br />
               - &nbsp;Business webapps <br />
               - &nbsp;Service Now - Portal <br />

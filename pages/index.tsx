@@ -39,11 +39,9 @@ const Index: NextPage<StaticProps> = ({ repositories = [] }) => {
 
   const [progress, setProgress] = useState(0);
   const isMainContentTransitioning = progress > 0;
-
-  const [isNavigationHeaderHidden, setNavigationHeaderHidden] = useState(false);
-
+  const [isNavigationHeaderHidden, setNavigationHeaderHidden] =
+    useState(false);
   const emailDialog = useDialogState();
-
   useFullStory();
 
   return (

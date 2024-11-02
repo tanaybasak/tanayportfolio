@@ -1,6 +1,5 @@
 import { type ReactNode } from 'react';
 
-
 const ciandt: Company = {
   color: '#fff',
   logo: 'ciandt',
@@ -43,7 +42,7 @@ export const experiences: Experience[] = [
           consistency and efficiency. By conducting usability tests
           with
           <code>Microsoft Clarity</code> and gathering user feedback,
-          I've improved user satisfaction and engagement.
+          I,ve improved user satisfaction and engagement.{' '}
         </p>
         <p>
           I actively participate in code reviews, adhere to coding

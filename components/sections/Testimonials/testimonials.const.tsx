@@ -135,8 +135,8 @@ export const testimonials = [
     quote: (
       <>
         <p>
-          I&apos;ve worked with Tanoy in a very detailed and
-          extensive project, where he proved to be a very{' '}
+          I&apos;ve worked with Tanoy in a very detailed and extensive
+          project, where he proved to be a very{' '}
           <strong>dedicated</strong> and <strong>committed</strong>{' '}
           professional, paying attention to all details.
         </p>

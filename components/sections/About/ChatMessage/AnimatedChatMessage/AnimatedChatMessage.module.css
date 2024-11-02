@@ -1,0 +1,200 @@
+.animatedScroll {
+  animation-duration: 1s;
+  animation-play-state: paused;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+}
+
+/* Container */
+.container {
+  --font-size-start: 2em;
+
+  composes: animatedScroll;
+
+  will-change: font-size, height, top, left, transform;
+
+  position: relative;
+
+  width: 100%;
+
+  animation-name: container;
+}
+
+@media screen and (width <= 42rem) {
+  .container {
+    --font-size-start: 1.5em;
+  }
+}
+
+@keyframes container {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 15em;
+
+    font-size: var(--font-size-start);
+  }
+
+  75% {
+    height: 8em;
+  }
+
+  100% {
+    top: 100%;
+    left: 0%;
+    transform: translate(0, -100%);
+
+    height: 4.25em;
+
+    font-size: 1em;
+  }
+}
+
+/* Picture */
+.picture {
+  --translate-y-end: 0.5em;
+  --picture-dimension-end: 2.75em;
+
+  composes: animatedScroll;
+
+  will-change: width, height, left, transform;
+
+  position: absolute;
+  top: 0;
+
+  max-width: none;
+
+  animation-name: picture;
+}
+
+@media screen and (width <= 42rem) {
+  .picture {
+    --translate-y-end: 1.25em;
+    --picture-dimension-end: 1.75em;
+  }
+}
+
+@keyframes picture {
+  0% {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10em;
+    height: 10em;
+  }
+
+  80% {
+    transform: translate(-20%, -0.5em);
+  }
+
+  100% {
+    left: 0%;
+    transform: translate(0%, var(--translate-y-end));
+    width: var(--picture-dimension-end);
+    height: var(--picture-dimension-end);
+  }
+}
+
+/* Picture Image */
+.pictureImage {
+  opacity: 0%;
+  transition: opacity 250ms ease-in-out;
+}
+
+.inView .pictureImage {
+  opacity: 100%;
+}
+
+/* Picture Arc Fill */
+.pictureArcFill {
+  opacity: 0%;
+  transition: opacity 250ms 550ms ease-in-out;
+}
+
+.inView .pictureArcFill {
+  opacity: 100%;
+}
+
+/* Picture Arc Stroke */
+.pictureArcStroke {
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  transition: stroke-dashoffset 500ms 200ms ease-in-out;
+}
+
+.inView .pictureArcStroke {
+  stroke-dashoffset: 0;
+}
+
+/* Bubble */
+.bubble {
+  --translate-x-em-end: 3.75em;
+
+  composes: animatedScroll;
+
+  will-change: left, transform;
+
+  position: absolute;
+  bottom: 2em;
+
+  white-space: nowrap;
+
+  opacity: 0%;
+
+  transition:
+    bottom 250ms 650ms ease-in-out,
+    opacity 250ms 650ms ease-in-out;
+  animation-name: bubble;
+}
+
+@media screen and (width <= 42rem) {
+  .bubble {
+    --translate-x-em-end: 3.15em;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    left: 50%;
+    transform: translateX(calc(-50% + 0em));
+  }
+
+  100% {
+    left: 0%;
+    transform: translateX(calc(0% + var(--translate-x-em-end)));
+  }
+}
+
+.inView .bubble {
+  bottom: 0;
+  opacity: 100%;
+}
+
+/* Bubble Pointer */
+.bubblePointer {
+  composes: animatedScroll;
+  will-change: top, left, transform;
+  animation-name: bubblePointer;
+}
+
+@keyframes bubblePointer {
+  0% {
+    top: 0.2em;
+    left: 50%;
+    transform: rotate(90deg) translate(-50%, 0%);
+  }
+
+  80% {
+    top: 0.2em;
+    transform: rotate(90deg) translate(-80%, -50%);
+  }
+
+  100% {
+    top: 1.7em;
+    left: 0%;
+    transform: rotate(0deg) translate(0%, 0%);
+  }
+}

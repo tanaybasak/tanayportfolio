@@ -1,0 +1,37 @@
+.navigation {
+  position: absolute;
+  z-index: 3;
+  top: 100px;
+  left: 100px;
+
+  list-style: none;
+}
+
+.navigationButton {
+  padding: 0.3em;
+
+  font-size: 1.2em;
+  color: var(--theme-text);
+
+  background: var(--theme-background);
+  border: 1px solid var(--theme-text);
+
+  transition: none;
+}
+
+.navigation:not(:focus-within),
+.navigationButton:not(:focus) {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

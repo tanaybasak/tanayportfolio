@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
+  env: {
+    NEXT_PUBLIC_LAST_UPDATED:
+      process.env.NEXT_PUBLIC_LAST_UPDATED ||
+      new Date().toISOString(),
+  },
+  eslint: {
+    dirs: ['__tests__', 'components', 'consts', 'hooks', 'pages'],
+  },
+  output: 'export',
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+  swcMinify: true,
+};

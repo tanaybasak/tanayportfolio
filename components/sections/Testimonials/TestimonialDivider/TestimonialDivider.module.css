@@ -1,0 +1,71 @@
+.dividerStroke {
+  stroke-dasharray: 456px;
+  stroke-dashoffset: 456px;
+  stroke-linecap: round;
+  stroke-width: 15px;
+}
+
+.divider {
+  z-index: 1;
+
+  display: block;
+
+  filter: drop-shadow(0 35px 0 var(--theme-primary-bright));
+
+  fill: var(--theme-testimonial-background);
+  stroke: var(--theme-primary-dark);
+}
+
+.dividerGlow {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+
+  fill: none;
+  stroke: var(--theme-primary-dark);
+}
+
+.dividerGlow > path {
+  filter: drop-shadow(10px 10px 20px var(--theme-accent-color));
+}
+
+.dividerBottom {
+  transform: translateY(-5%);
+
+  fill: var(--theme-testimonial-background);
+  stroke: var(--theme-secondary-bright);
+  stroke-dasharray: 1300px;
+  stroke-dashoffset: 1300px;
+  stroke-linecap: round;
+  stroke-width: 10px;
+}
+
+.animate {
+  stroke-dashoffset: 0;
+  transition-timing-function: cubic-bezier(0.65, 0.18, 0.21, 0.65);
+  transition-property: stroke-dashoffset;
+}
+
+.animate.divider,
+.animate.dividerGlow {
+  transition-delay: 0;
+  transition-duration: 1.5s;
+}
+
+.animate.dividerBottom {
+  transition-duration: 1s;
+}
+
+@media screen and (width <= 42rem) {
+  .dividerStroke {
+    stroke-width: 35px;
+  }
+
+  .dividerGlow > path {
+    filter: drop-shadow(10px 10px 16px var(--theme-accent-color));
+  }
+
+  .dividerBottom {
+    stroke-width: 50px;
+  }
+}

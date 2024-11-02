@@ -2,9 +2,6 @@ import { type FC } from 'react';
 
 import { Button } from 'reakit/Button';
 
-import { useFirstMount } from '~/hooks/useFirstMount';
-import * as format from '~/utils/format';
-
 import { FooterTransitionTrigger } from './FooterTransitionTrigger/FooterTransitionTrigger';
 import { MadeBy } from './MadeBy/MadeBy';
 
@@ -22,37 +19,28 @@ export const Footer: FC<Props> = ({
   onEmailDialogOpen,
   onNavigationHeaderTrigger,
   onProgressChange,
-}) => {
-  const lastUpdated = new Date(process.env.NEXT_PUBLIC_LAST_UPDATED);
+}) => (
+  <>
+    <FooterTransitionTrigger
+      onNavigationHeaderTrigger={onNavigationHeaderTrigger}
+      onProgressChange={onProgressChange}
+    />
 
-  const isFirstMount = useFirstMount();
+    <footer className={styles.footer}>
+      <Button
+        className={styles.contactButton}
+        onClick={onEmailDialogOpen}
+      >
+        <span>Contact me</span>
+        <span aria-hidden className={styles.contactButtonDecoration}>
+          {'>'}
+        </span>
+      </Button>
+      <MadeBy />
 
-  return (
-    <>
-      <FooterTransitionTrigger
-        onNavigationHeaderTrigger={onNavigationHeaderTrigger}
-        onProgressChange={onProgressChange}
-      />
-
-      <footer className={styles.footer}>
-        <Button
-          className={styles.contactButton}
-          onClick={onEmailDialogOpen}
-        >
-          <span>Contact me</span>
-          <span
-            aria-hidden
-            className={styles.contactButtonDecoration}
-          >
-            {'>'}
-          </span>
-        </Button>
-        <MadeBy />
-
-        {isNavigationHeaderHidden && (
-          <div className={styles.background} />
-        )}
-      </footer>
-    </>
-  );
-};
+      {isNavigationHeaderHidden && (
+        <div className={styles.background} />
+      )}
+    </footer>
+  </>
+);

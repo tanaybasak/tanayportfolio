@@ -47,36 +47,7 @@ export const Footer: FC<Props> = ({
             {'>'}
           </span>
         </Button>
-
         <MadeBy />
-
-        <div className={styles.details}>
-          <span
-            title={
-              isFirstMount
-                ? format.dateTimeUTC(lastUpdated)
-                : format.dateTime(lastUpdated)
-            }
-          >
-            Last published{' '}
-            <time
-              dateTime={lastUpdated.toISOString()}
-              itemProp="datePublished"
-            >
-              {isFirstMount
-                ? format.dateTimeUTC(lastUpdated)
-                : format.relativeTime(lastUpdated)}
-            </time>
-          </span>
-
-          <a
-            href="https://github.com/renato-bohler/renato-bohler.github.io"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Source code
-          </a>
-        </div>
 
         {isNavigationHeaderHidden && (
           <div className={styles.background} />
